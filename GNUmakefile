@@ -137,4 +137,7 @@ teamcity-test:
 validate-examples:
 	./scripts/validate-examples.sh
 
-.PHONY: build build-docker test test-docker testacc vet fmt fmtcheck errcheck scaffold-website test-compile website website-test validate-examples
+link-milestone:
+	go run internal/tools/link-milestone/main.go
+
+.PHONY: build build-docker test test-docker testacc vet fmt fmtcheck errcheck scaffold-website test-compile website website-test validate-examples link-milestone
